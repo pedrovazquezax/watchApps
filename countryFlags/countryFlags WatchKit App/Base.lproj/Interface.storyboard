@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="countryFlags_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="center" id="ngz-Fe-nue">
+                            <items>
+                                <tableRow identifier="CountryRow" id="ypx-j4-CYR" customClass="CountryRow" customModule="countryFlags_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="Ior-78-Xnw">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Country Name" id="qba-XP-bx5"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="countryName" destination="qba-XP-bx5" id="zDE-eN-z2u"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="ngz-Fe-nue" id="wmW-KA-AHX"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--showDetails-->
+        <scene sceneID="k3C-FS-ldt">
+            <objects>
+                <controller identifier="showDetails" id="ZkP-nM-8FJ" customClass="DetailInterfaceController" customModule="countryFlags_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="209" alignment="center" verticalAlignment="center" layout="vertical" id="DMQ-S5-8TR">
+                            <items>
+                                <label width="1" alignment="left" text="Country Name" textAlignment="center" id="S4U-7m-Wpe">
+                                    <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                                </label>
+                                <imageView height="70" alignment="left" image="au" id="9Gk-oa-Cs8"/>
+                                <label width="1" alignment="left" text="Capital" textAlignment="center" id="MmU-IY-CGL">
+                                    <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                                </label>
+                                <label width="1" height="20" alignment="center" text="Label" textAlignment="center" id="mwm-yd-RXG"/>
+                                <label width="1" alignment="center" text="Currency" textAlignment="center" id="2re-lq-RiZ">
+                                    <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                                </label>
+                                <label width="1" alignment="center" text="Label" textAlignment="center" id="HlQ-rO-5AX"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="capitalLabel" destination="mwm-yd-RXG" id="Lgj-on-Qfa"/>
+                        <outlet property="countryImageView" destination="9Gk-oa-Cs8" id="6GO-yA-HwO"/>
+                        <outlet property="countryNameLabel" destination="S4U-7m-Wpe" id="UNs-jg-Uab"/>
+                        <outlet property="currencyLabel" destination="HlQ-rO-5AX" id="xtd-xY-zBl"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="460" y="292"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="countryFlags_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
