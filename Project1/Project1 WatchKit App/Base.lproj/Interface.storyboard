@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Project1_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" pagingScroll="YES" id="jte-sz-fZd">
+                            <items>
+                                <tableRow identifier="Row" id="NgS-rM-CW2" customClass="NoteSelectRow" customModule="Project1_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="56" alignment="left" id="quG-gH-Kd3">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Label" numberOfLines="3" id="LIz-Hn-Kpt"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="textLabel" destination="LIz-Hn-Kpt" id="w9M-6S-ebw"/>
+                                        <segue destination="kSN-JV-VYE" kind="push" id="az6-zJ-oZ2"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" alignment="left" title="Add New Note" id="QMf-I9-5qw">
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addNewNote" destination="AgC-eL-Hgc" id="xS4-Ay-cjU"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Credits" id="wWR-YM-A8G">
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="T1k-tc-x0j" kind="push" id="WPF-4m-lHj"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="jte-sz-fZd" id="mYi-ta-nrT"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="3Se-Xr-6Km">
+            <objects>
+                <controller id="T1k-tc-x0j">
+                    <items>
+                        <label alignment="left" numberOfLines="0" id="abg-iZ-DOa">
+                            <string key="text">347289yfoihiuvhgwkwdfhgkha8fhf8hfihsfsi7hsfh7isusgkh7g74hgi7shsi7ehgsi7hgi8egsh75huss7yge58ogish7ih8ishs8hsi8hs8ghsi8s5hgishgis87gh5s89hsi8s5h8shs5ñi8hgso9hsi7shi8shhgis7ghs8ohgsi7hss58hs57s5hshi7shs75hs5i7hs5i75hi7hi75eh5ei7h5ei7hi75hs5i7hg755ghgi7h57ghghhgghghgh</string>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="409" y="542"/>
+        </scene>
+        <!--Detail Interface Controller-->
+        <scene sceneID="3aG-Iu-739">
+            <objects>
+                <controller id="kSN-JV-VYE" customClass="DetailInterfaceController" customModule="Project1_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Label" numberOfLines="0" id="Uf4-2e-4wV"/>
+                    </items>
+                    <connections>
+                        <outlet property="textLabel" destination="Uf4-2e-4wV" id="VGA-KM-O65"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="398" y="31"/>
+        </scene>
+    </scenes>
+</document>
