@@ -67,6 +67,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     func  newLevel() {
+        
         if level == 21 {
             result.setHidden(false)
             question.setHidden(true)
